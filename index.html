@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact Bodyworks</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(45deg, #005bea, #00c6fb);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      padding: 50px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .section h2 {
+      color: #005bea;
+    }
+    .expandable {
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .expandable:hover {
+      background: #e9f5ff;
+    }
+    .more-info {
+      display: none;
+      padding: 10px 0;
+    }
+    .contact {
+      background: #00c6fb;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    .contact a {
+      color: white;
+      font-size: 20px;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function toggleInfo(element) {
+      const info = element.querySelector('.more-info');
+      if (info.style.display === 'block') {
+        info.style.display = 'none';
+      } else {
+        info.style.display = 'block';
+      }
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Impact Bodyworks</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div id="services">
+  <div class="section expandable" onclick="toggleInfo(this)">
+    <h2>Insurance Claims</h2>
+    <div class="more-info">
+      <p>We help you through the claims process and restore your vehicle to pre-accident condition.</p>
+    </div>
+  </div>
+
+  <div class="section expandable" onclick="toggleInfo(this)">
+    <h2>Panel Beating</h2>
+    <div class="more-info">
+      <p>Expert panel beating services to remove dents and realign your vehicle structure.</p>
+    </div>
+  </div>
+
+  <div class="section expandable" onclick="toggleInfo(this)">
+    <h2>Paint Correction</h2>
+    <div class="more-info">
+      <p>Restore your car's paint to its original shine with advanced correction techniques.</p>
+    </div>
+  </div>
+
+  <div class="section expandable" onclick="toggleInfo(this)">
+    <h2>Car Restoration</h2>
+    <div class="more-info">
+      <p>Bring classic and damaged vehicles back to life with full or partial restoration.</p>
+    </div>
+  </div>
+
+  <div class="section expandable" onclick="toggleInfo(this)">
+    <h2>Detailing</h2>
+    <div class="more-info">
+      <p>Thorough interior and exterior detailing to make your car look brand new.</p>
+    </div>
+  </div>
+</div>
+
+<div class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Call us: <a href="tel:0370745147">03 7074 5147</a></p>
+</div>
+
+</body>
+</html>
