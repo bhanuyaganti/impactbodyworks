@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact Bodyworks</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #121212;
+      color: #f0f0f0;
+      font-family: sans-serif;
+      margin: 0;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-family: 'Anton', sans-serif;
+      color: #ff3c3c;
+      letter-spacing: 2px;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+    .service {
+      background: #2a2a2a;
+      width: 280px;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .service:hover {
+      transform: scale(1.03);
+    }
+    .service img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .service h2 {
+      margin: 10px;
+      color: #ff3c3c;
+    }
+    .rocket-leave {
+      opacity: 0;
+      transform: translateY(-100vh);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Impact Bodyworks</h1>
+  </header>
+  <div class="services" id="services">
+
+    <div class="service" onclick="rocketNavigate('insurance.html', this)">
+      <img src="insurance.jpg" alt="Insurance Claims">
+      <h2>Insurance Claims</h2>
+    </div>
+    
+
+    <div class="service" onclick="rocketNavigate('panel.html', this)">
+      <img src="panel.jpg" alt="Panel Beating">
+      <h2>Panel Beating</h2>
+    </div>
+    
+
+    <div class="service" onclick="rocketNavigate('paint.html', this)">
+      <img src="paint.jpg" alt="Paint Correction">
+      <h2>Paint Correction</h2>
+    </div>
+    
+
+    <div class="service" onclick="rocketNavigate('restoration.html', this)">
+      <img src="restoration.jpg" alt="Car Restoration">
+      <h2>Car Restoration</h2>
+    </div>
+    
+
+    <div class="service" onclick="rocketNavigate('detailing.html', this)">
+      <img src="detailing.jpg" alt="Detailing">
+      <h2>Detailing</h2>
+    </div>
+    
+  </div>
+  <script>
+    function rocketNavigate(url, el) {
+      el.classList.add('rocket-leave');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400);
+    }
+  </script>
+</body>
+</html>
