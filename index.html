@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact Bodyworks</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #121212;
+      color: #f0f0f0;
+      font-family: sans-serif;
+      margin: 0;
+    }
+    header {
+      text-align: center;
+      padding: 20px 20px 10px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-family: 'Anton', sans-serif;
+      color: #ff3c3c;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .business-description {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #ccc;
+      padding: 0 20px 30px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+    .service {
+      background: #2a2a2a;
+      width: 320px;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      padding-bottom: 20px;
+    }
+    .service:hover {
+      transform: scale(1.03);
+    }
+    .service img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .service h2 {
+      margin: 15px 10px 10px;
+      color: #ff3c3c;
+      font-size: 1.4rem;
+    }
+    .service p {
+      font-size: 1.05rem;
+      padding: 0 15px;
+      color: #ddd;
+    }
+    .rocket-leave {
+      opacity: 0;
+      transform: translateY(-100vh);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e1e1e;
+      color: #f0f0f0;
+    }
+    footer a {
+      color: #90caf9;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Impact Bodyworks Logo" class="logo" style="max-height: 80px; display:block; margin: 0 auto 10px;">
+    <h1>Impact Bodyworks</h1>
+    <p class="business-description">
+      At Impact Bodyworks, we specialize in high-quality automotive restoration and detailing services. Whether it’s a scratch, dent, or a full restoration project, our expert team in Laverton North delivers precision, care, and craftsmanship to bring your vehicle back to life — inside and out.
+    </p>
+  </header>
+
+  <div class="services" id="services">
+
+    <div class="service" onclick="rocketNavigate('insurance.html', this)">
+      <img src="insurance.jpg" alt="Insurance Claims">
+      <h2>Insurance Claims</h2>
+      <p>Let us handle the paperwork and the paintwork. We simplify the insurance process and ensure your car is restored with professional quality and care.</p>
+    </div>
+
+    <div class="service" onclick="rocketNavigate('panel.html', this)">
+      <img src="panel.jpg" alt="Panel Beating">
+      <h2>Panel Beating</h2>
+      <p>From minor dents to major damage, our panel beating experts restore your vehicle's structure and appearance using modern techniques.</p>
+    </div>
+
+    <div class="service" onclick="rocketNavigate('paint.html', this)">
+      <img src="paint.jpg" alt="Paint Correction">
+      <h2>Paint Correction</h2>
+      <p>Erase swirl marks, scratches, and fading. Our high-end paint correction services bring back the original gloss and shine to your vehicle.</p>
+    </div>
+
+    <div class="service" onclick="rocketNavigate('restoration.html', this)">
+      <img src="restoration.jpg" alt="Car Restoration">
+      <h2>Car Restoration</h2>
+      <p>We bring vintage and classic vehicles back to life with a meticulous eye for detail and authentic craftsmanship.</p>
+    </div>
+
+    <div class="service" onclick="rocketNavigate('detailing.html', this)">
+      <img src="detailing.jpg" alt="Detailing">
+      <h2>Detailing</h2>
+      <p>Interior and exterior detailing that goes beyond clean — delivering a pristine, showroom-quality finish every time.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p><strong>Phone:</strong> <a href="tel:03 7074 5147">03 7074 5147</a></p>
+    <p><strong>Email:</strong> <a href="mailto:info@ibodyworks.com">info@ibodyworks.com</a></p>
+    <p><strong>Address:</strong> 8 Jimmy Pl, Laverton North VIC 3026, Australia</p>
+    <p><strong>Operating Hours:</strong><br>
+      Mon - Fri: 9:00 AM – 7:00 PM<br>
+      Sat: 9:00 AM – 5:00 PM<br>
+      Sun: Closed</p>
+  </footer>
+
+  <script>
+    function rocketNavigate(url, el) {
+      el.classList.add('rocket-leave');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400);
+    }
+  </script>
+</body>
+</html>
